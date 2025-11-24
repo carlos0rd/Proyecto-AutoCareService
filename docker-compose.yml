@@ -13,7 +13,7 @@ services:
       - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./pnc-proyecto-final-grupo-14-s01/AutoCarService.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./pnc-proyecto-final-grupo-14-s01-feedback/AutoCarService.sql:/docker-entrypoint-initdb.d/AutoCarService.sql
     networks:
       - autocare-network
     healthcheck:
@@ -25,7 +25,7 @@ services:
   # Backend API
   backend:
     build:
-      context: ./pnc-proyecto-final-grupo-14-s01/AutoCarService - Backend
+      context: ./pnc-proyecto-final-grupo-14-s01-feedback/AutoCarService - Backend
       dockerfile: Dockerfile
     container_name: autocare-backend
     restart: unless-stopped
@@ -50,7 +50,7 @@ services:
   # Frontend
   frontend:
     build:
-      context: ./pnc-proyecto-final-frontend-grupo-14-s01/AutoCare
+      context: ./pnc-proyecto-final-frontend-grupo-14-s01-main/AutoCare
       dockerfile: Dockerfile
     container_name: autocare-frontend
     restart: unless-stopped

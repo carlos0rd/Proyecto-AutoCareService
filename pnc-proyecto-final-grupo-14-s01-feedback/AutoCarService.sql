@@ -1,6 +1,3 @@
-CREATE DATABASE AutoCarService;
-USE AutoCarService;
-
 CREATE TABLE roles (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(50) UNIQUE NOT NULL 
@@ -250,7 +247,7 @@ MODIFY status ENUM(
   'Aprobada por el cliente'
 ) NOT NULL;
 
---4
+-- 4
 CREATE TABLE IF NOT EXISTS aprobacion_cotizacion (
   id INT AUTO_INCREMENT PRIMARY KEY,
   reparacion_id INT NOT NULL,
