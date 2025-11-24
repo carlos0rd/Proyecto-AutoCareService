@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Responsive para móviles */
+@media (max-width: 1024px) {
+  .login-container {
+    flex-direction: column !important;
+  }
+
+  .login-left {
+    width: 100% !important;
+  }
+
+  .login-right {
+    display: none !important;
+  }
+
+  .login-header {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .login-title {
+    font-size: 2rem !important;
+  }
+}
+
+
+
